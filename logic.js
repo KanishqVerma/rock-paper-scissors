@@ -24,4 +24,49 @@ function getHumanChoice(){
     return input.toLowerCase();
 }
 
-console.log(getHumanChoice());
+// To take both choices as inputs and log the winner, also increment the score, if needed
+function playRound(humanChoice, computerChoice){
+    if (humanChoice === computerChoice){
+        console.log("Draw");
+        return; 
+    }
+    else if ((humanChoice == "rock" && computerChoice == "scissors") || (humanChoice == "scissors" && computerChoice == "paper") || (humanChoice == "paper" && computerChoice == "rock")){
+        console/log("You WIN!!, " + humanChoice + " beats " + computerChoice);
+        humanChoice += 1;
+        return;
+    }
+    else{
+        console.log("You LOSE!!, " + computerChoice + " beats " + humanChoice);
+        computerScore += 1;
+        return;
+    }
+}
+
+// // To play a game of n rounds
+// function playGame(n){
+//     for (let i = 0; i < n; i++){
+//         playRound();
+//     }
+//     if (humanScore > computerScore)
+//     {
+//         console.log("Congratulations !! YOU WIN");
+//         return;
+//     }
+//     else if (computerScore > humanScore)
+//     {
+//         console.log("Congratulations !! YOU LOSE");
+//         return;
+//     }
+//     else{
+//         console.log("DRAW :(");
+//         return;
+//     }
+// }
+
+
+// let humanScore = 0;
+// let computerScore = 0;
+// let humanChoice = getHumanChoice();
+// let computerChoice = getComputerChoice();
+// let rounds = prompt("How many rounds?");
+// playGame(rounds);
