@@ -42,26 +42,26 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-// // To play a game of n rounds
-// function playGame(n){
-//     for (let i = 0; i < n; i++){
-//         playRound();
-//     }
-//     if (humanScore > computerScore)
-//     {
-//         console.log("Congratulations !! YOU WIN");
-//         return;
-//     }
-//     else if (computerScore > humanScore)
-//     {
-//         console.log("Congratulations !! YOU LOSE");
-//         return;
-//     }
-//     else{
-//         console.log("DRAW :(");
-//         return;
-//     }
-// }
+// To play a game of n rounds
+function playGame(n){
+    for (let i = 0; i < n; i++){
+        playRound();
+    }
+    if (humanScore > computerScore)
+    {
+        console.log("Congratulations !! YOU WIN");
+        return;
+    }
+    else if (computerScore > humanScore)
+    {
+        console.log("Congratulations !! YOU LOSE");
+        return;
+    }
+    else{
+        console.log("DRAW :(");
+        return;
+    }
+}
 
 
 // let humanScore = 0;
