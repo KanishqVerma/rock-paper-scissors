@@ -21,17 +21,27 @@ function getComputerChoice(){
 // To get user's choice, returns a string - rock/paper/scissors
 function getHumanChoice(){
     let input = prompt("Rock / Paper / Scissors\nEnter you choice:");
-    return input.toLowerCase();
+    if (input.toLowerCase() === "rock" || input.toLowerCase() === "paper" || input.toLowerCase() === "scissors")
+    {
+        return input.toLowerCase();
+    }
+    else{
+        console.log("INVALID CHOICE");
+        return getHumanChoice();
+    }
 }
 
 // To take both choices as inputs and log the winner, also increment the score, if needed
-function playRound(humanChoice, computerChoice){
+function playRound(){
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+
     if (humanChoice === computerChoice){
         console.log("Draw");
         return; 
     }
     else if ((humanChoice == "rock" && computerChoice == "scissors") || (humanChoice == "scissors" && computerChoice == "paper") || (humanChoice == "paper" && computerChoice == "rock")){
-        console/log("You WIN!!, " + humanChoice + " beats " + computerChoice);
+        console.log("You WIN!!, " + humanChoice + " beats " + computerChoice);
         humanChoice += 1;
         return;
     }
@@ -64,9 +74,13 @@ function playGame(n){
 }
 
 
-// let humanScore = 0;
-// let computerScore = 0;
-// let humanChoice = getHumanChoice();
-// let computerChoice = getComputerChoice();
-// let rounds = prompt("How many rounds?");
-// playGame(rounds);
+
+
+let humanScore = 0;
+let computerScore = 0;
+let rounds;
+do{
+    rounds = Number(prompt("How many rounds?"));
+}
+while(rounds <= 0 || Number.isInteger(rounds) == false);
+playGame(rounds);
