@@ -4,22 +4,24 @@ function getComputerChoice(){
 
     if (choice >= 1 && choice <= 3)
     {
-        return "Rock";
+        return "rock";
     }
     else if (choice >= 4 && choice <= 6)
     {
-        return "Paper";
+        return "paper";
     }
     else if (choice >= 7 && choice <= 9){
-        return "Scissors";
+        return "scissors";
     }
     else{
         return getComputerChoice();
     }
 }
 
-// To get user's choice, returns a string - Rock/Paper/Scissors
-// function getHumanChoice(){
-//     let choice = prompt("Rock / Paper / Scissors.\nEnter you choice:")
-// }
+// To get user's choice, returns a string - rock/paper/scissors
+function getHumanChoice(){
+    let input = prompt("Rock / Paper / Scissors\nEnter you choice:");
+    return input.toLowerCase();
+}
 
+console.log(getHumanChoice());
