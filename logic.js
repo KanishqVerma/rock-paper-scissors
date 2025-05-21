@@ -42,7 +42,7 @@ function playRound(){
     }
     else if ((humanChoice == "rock" && computerChoice == "scissors") || (humanChoice == "scissors" && computerChoice == "paper") || (humanChoice == "paper" && computerChoice == "rock")){
         console.log("You WIN!!, " + humanChoice + " beats " + computerChoice);
-        humanChoice += 1;
+        humanScore += 1;
         return;
     }
     else{
