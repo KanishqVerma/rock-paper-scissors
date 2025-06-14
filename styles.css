@@ -1,0 +1,34 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(139, 169, 102)
+}
+
+.playButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#rock, #paper, #scissor{
+    border-radius: 10px;
+    height: 50px;
+    width: 75px;
+    font-size: medium;
+}
+
+#rock{
+    background-color: grey;
+    color: white;
+}
+
+#scissor{
+   color: white;
+   background-color: orange;
+}
